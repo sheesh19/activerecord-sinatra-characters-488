@@ -32,3 +32,66 @@ bundle exec ruby app.rb
 ```
 
 Enjoy!
+
+
+## CRUD ACTIVE RECORD RECAP (RESTAURANTS)
+
+### READ ALL
+- Restaurant.all
+
+### READ ONE
+- Restaurant.find(1)
+- Restaurant.find_by(name: 'The Leaky Cauldron') # returns one
+
+### CREATE
+- hogs_head = Restaurant.new(name: "Hog's Head", address: 'Hogsmeade')
+- hogs_head.save
+- Restaurant.create(name: "Hog's Head", address: 'Hogsmeade')
+
+### UPDATE
+- update_restaurant = Restaurant.find(1)
+- update_restaurant.address = 'London'
+- update_restaurant.save
+
+### DELETE
+- destroy_restaurant = Restaurant.find(1)
+- destroy_restaurant.destroy
+
+### FILTER
+- Restaurant.where(address: 'London') # returns multiple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

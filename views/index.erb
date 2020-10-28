@@ -1,0 +1,28 @@
+
+<h2>Character List</h2>
+
+<ul>
+  <!-- DOES NOT DISPLAY || ER TAG -->
+  <%# Time.now %>
+
+  <!-- DOES DISPLAY || PE TAG -->
+  <%#= Time.now %>
+
+  <% @characters.each do |character| %>
+    <li>
+      <a href="/characters/<%= character.id %>"><%= character.name %></a>
+    </li>
+
+  <% end %>
+
+</ul>
+
+<!-- FORM HERE FOR OUR NEW CHARACTER -->
+
+<form action="/characters" method="post">
+  <label for="name">Name</label>
+  <input type="text" name="name">
+  <label for="address">Address</label>
+  <input type="text" name="address">
+  <input type="submit">
+</form>
